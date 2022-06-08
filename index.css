@@ -1,11 +1,7 @@
 body {
-    background-image: url("https://www.slideteam.net/wp/wp-content/uploads/2016/05/Graidient-4.png") no-repeat center center;
+    background-image: url("https://www.slideteam.net/wp/wp-content/uploads/2016/05/Graidient-4.png");
     background-repeat: no-repeat;
     background-size: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }  
 
 
