@@ -76,19 +76,19 @@ passgenBtn.addEventListener("click", function() {
 document.getElementById("input-el1").onclick = function() {
     this.select();
     document.execCommand('copy');
-    alert(`The choosen password ${window.getSelection().toString()} is coppied`);
+    alert(`The chosen password ${window.getSelection().toString()} is copied`);
   };
 
   document.getElementById("input-el2").onclick = function() {
     this.select();
     document.execCommand('copy');
-    alert(`The choosen password ${window.getSelection().toString()} is coppied`);
+    alert(`The chosen password ${window.getSelection().toString()} is copied`);
   };
 
   document.getElementById("input-el3").onclick = function() {
     this.select();
     document.execCommand('copy');
-    alert(`The choosen password ${window.getSelection().toString()} is coppied`);
+    alert(`The chosen password ${window.getSelection().toString()} is copied`);
   };
 
   document.getElementById("input-el4").onclick = function() {
