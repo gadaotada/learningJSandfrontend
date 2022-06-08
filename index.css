@@ -1,0 +1,192 @@
+body {
+    background-image: url("https://www.slideteam.net/wp/wp-content/uploads/2016/05/Graidient-4.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}  
+
+
+.headd {
+    display: block;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 52pt;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1%;
+    margin-top: 10%;
+    color: rgb(37, 37, 37)
+}
+
+.wrapper {
+    display: block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    border-radius: 10px;
+    border: 6px solid white;
+    background-color: rgb(17, 17, 31);
+  }
+
+.toppart {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24pt;
+    font-weight: bold;
+    color: white;
+}
+
+.genclass{
+    padding-top: 100px;
+    margin: 0px;
+    padding-bottom: 0px;
+}
+
+.never {
+    font-size: 14pt;
+    font-weight: lighter;
+    color: rgb(90, 86, 86);
+    padding-top: 10px;
+    padding-bottom: 50px;
+    margin: 0px;
+}
+
+hr {
+    border: 1px solid rgb(90, 86, 86);
+    background-color: rgb(90, 86, 86);
+}
+
+.randomp {
+    padding-top: 0px;
+    margin: 0px;
+    color: rgb(86, 167, 86);
+}
+
+.botpart {
+    text-align: center;
+    width: 300px;
+    padding: 0px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+
+
+.botpart1 {
+    width: 350px;
+}
+
+.botpart2 {
+    width: 350px;
+}
+
+td, #input-el1, #input-el3{
+    margin-left: 50px;
+    margin-bottom: 20px;
+    width: 180px;
+}
+
+#input-el2, #input-el4 {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 180px;
+}
+
+
+input {
+    width: 132px;
+    height: 30px;
+    background-color: rgb(50, 50, 65);
+    border-radius: 10px;
+    border: 1px rgb(2, 2, 2);
+    text-align: center;
+    color:rgb(86, 167, 86)
+}
+
+#passlen {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    height: 30px;
+    background-color: rgb(86, 167, 86);
+    border-radius: 10px;
+    border: 1px solid rgb(2, 2, 2);
+    text-align: center;
+    color: white;
+    width: 60px;
+    margin-top: 8px;
+    margin-left: 30px;
+}
+
+.top-btn {
+    display: inline-block;
+    width:120px;
+    height: 50px;
+}
+
+.top-inp {
+    display: inline-block;
+    width: 80px;
+    height: 50px;
+    margin-right: 50px;
+    float: right;
+}
+
+
+img{
+    width: 12%;
+    margin-left: 0px;
+    padding-left: 0px;
+    float:left;
+    padding-top: 0px;
+}
+
+
+.gigatest {
+    display: block;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 10px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 38px;
+}
+
+.gigatest:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.gigatest:focus {
+    outline: none;
+}
+
+
+.gigatest {
+    background-image: linear-gradient(to right, rgb(86, 167, 86)0, #3cba92, #30dd8a, rgb(86, 167, 86));
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+
+
+.passlenp {
+    font-size: 10pt;
+    width: 220px;
+    margin-top: 6px;
+    font-style: italic;
+    margin-left: 0px;
+    float: left;
+}
