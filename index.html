@@ -19,7 +19,7 @@
                  <button class="gigatest" id="passgen" readonly><img src="flash-outline.svg" />Generate passwords</button>
             </div>
             <div class="top-inp">
-                    <input type="text" id="passlen" onkeypress="return Nmbonly(event)"  maxlength="2">
+                    <input type="text" id="passlen" pattern="\d+" onkeypress="return Nmbonly(event)"  maxlength="2">
                     <p class="passlenp">* put password lenght</p>
                 </div>
             <hr>
