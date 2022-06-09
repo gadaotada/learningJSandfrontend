@@ -72,27 +72,28 @@ passgenBtn.addEventListener("click", function() {
     } 
 });
 
+let checkiftherespass = ['', '', '', ''];
 
 document.getElementById("input-el1").onclick = function() {
+    if (JSON.stringify(realpass) !== JSON.stringify(checkiftherespass)) { 
     this.select();
     document.execCommand('copy');
-    alert(`The chosen password ${window.getSelection().toString()} is copied`);
+    alert(`The choosen password ${window.getSelection().toString()} is coppied`);
+    } else return false
   };
 
   document.getElementById("input-el2").onclick = function() {
+    if (JSON.stringify(realpass) !== JSON.stringify(checkiftherespass)) { 
     this.select();
     document.execCommand('copy');
-    alert(`The chosen password ${window.getSelection().toString()} is copied`);
+    alert(`The choosen password ${window.getSelection().toString()} is coppied`);
+    } else return false
   };
 
   document.getElementById("input-el3").onclick = function() {
+    if (JSON.stringify(realpass) !== JSON.stringify(checkiftherespass)) { 
     this.select();
     document.execCommand('copy');
-    alert(`The chosen password ${window.getSelection().toString()} is copied`);
-  };
-
-  document.getElementById("input-el4").onclick = function() {
-    this.select();
-    document.execCommand('copy');
-    alert(`The chosen password ${window.getSelection().toString()} is copied`);
+    alert(`The choosen password ${window.getSelection().toString()} is coppied`);
+    } else return false
   };
