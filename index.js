@@ -5,7 +5,7 @@ let passlenreal = document.getElementById("passlen");
 
 function Nmbonly() {
          if (Number.isFinite(Number(passlenreal.value)) === false) {
-        alert("TEST");
+        alert("Please, enter only Numbers!");
         return false;
      }        
      }
