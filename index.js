@@ -3,14 +3,34 @@ let realpass = [];
 let yourcharset = [];
 let passlenreal = document.getElementById("passlen");
 
-function Nmbonly(event) {
+/*function Nmbonly(event) {
     let numonlyTrue = event.which || event.keyCode;
-    if (String.fromCharCode(numonlyTrue).match(/[^0-9]/g)) {
+    if (numonlyTrue > 31 && (numonlyTrue < 48 || numonlyTrue > 57)) {
         alert("Only Numbers allowed!");
         return false;
      }
 return true;
+}*/
+
+function Nmbonly(event) {
+    if ( event.keyCode == 190 || event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 || (event.keyCode == 65 && event.ctrlKey === true) || (event.keyCode >= 35 && event.keyCode <= 39)) {
+
+if(event.keyCode == 190){
+    if($(this).val().indexOf('.')!=-1){
+          event.preventDefault();
+        }
+
+    }
+return;
 }
+else {
+
+if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
+
+    event.preventDefault();
+    }
+}
+};
 
 addEventListener("change", function() {
     if (yourcharset.length === 0) {
