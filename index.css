@@ -9,7 +9,9 @@ body {
     body {
         background-image: url("bckimg.png");
     }
-    .headd
+    .headd {
+        width: 100px;
+      }
 }  
 
 
