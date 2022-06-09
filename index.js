@@ -5,7 +5,7 @@ let passlenreal = document.getElementById("passlen");
 
 function Nmbonly(event) {
     let numonlyTrue = event.which || event.keyCode;
-    if (numonlyTrue > 31 && (numonlyTrue < 48 || numonlyTrue > 57)) {
+    if (String.fromCharCode(numonlyTrue).match(/[^0-9]/g)) {
         alert("Only Numbers allowed!");
         return false;
      }
