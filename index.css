@@ -1,7 +1,7 @@
 body {
-    background: url("bckimg.png");
+    background-image: url("bckimg.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 200%;
 }  
 
 
