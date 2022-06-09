@@ -1,7 +1,13 @@
 body {
-    background-image: url("bckimg.png");
     background-repeat: no-repeat;
     background-size: 200%;
+}  
+
+@media (min-width: 481px) , (max-width: 1024px) and (min-width: 1025px)
+{
+    body {
+        background-image: url("bckimg.png");
+    }
 }  
 
 
