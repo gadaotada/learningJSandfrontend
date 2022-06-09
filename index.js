@@ -81,7 +81,7 @@ document.getElementById("input-el1").onclick = function() {
     if (JSON.stringify(realpass) !== JSON.stringify(checkiftherespass) && realpass.length === checkiftherespass.length) { 
     this.select();
     document.execCommand('copy');
-    alert(`The choosen password ${window.getSelection().toString()} is coppied`);
+    alert(`The chosen password ${window.getSelection().toString()} is copied`);
     } else return false
   };
 
@@ -89,7 +89,7 @@ document.getElementById("input-el1").onclick = function() {
     if (JSON.stringify(realpass) !== JSON.stringify(checkiftherespass) && realpass.length === checkiftherespass.length) { 
     this.select();
     document.execCommand('copy');
-    alert(`The choosen password ${window.getSelection().toString()} is coppied`);
+    alert(`The chosen password ${window.getSelection().toString()} is copied`);
     } else return false
   };
 
@@ -97,7 +97,7 @@ document.getElementById("input-el1").onclick = function() {
     if (JSON.stringify(realpass) !== JSON.stringify(checkiftherespass) && realpass.length === checkiftherespass.length) { 
     this.select();
     document.execCommand('copy');
-    alert(`The choosen password ${window.getSelection().toString()} is coppied`);
+    alert(`The chosen password ${window.getSelection().toString()} is copied`);
     } else return false
   };
 
@@ -105,6 +105,6 @@ document.getElementById("input-el1").onclick = function() {
     if (JSON.stringify(realpass) !== JSON.stringify(checkiftherespass) && realpass.length === checkiftherespass.length) { 
     this.select();
     document.execCommand('copy');
-    alert(`The choosen password ${window.getSelection().toString()} is coppied`);
+    alert(`The chosen password ${window.getSelection().toString()} is copied`);
     } else return false
   };
