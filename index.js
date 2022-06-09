@@ -4,8 +4,8 @@ let yourcharset = [];
 let passlenreal = document.getElementById("passlen");
 
 function Nmbonly(event) {
-    let ASCIICode = event.which ? event.which : event.keyCode;
-    if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
+    let numonlyTrue = event.which ? event.which : event.keyCode;
+    if (numonlyTrue > 31 && (numonlyTrue < 48 || numonlyTrue > 57 || numonlyTrue > 229)) {
         alert("Only Numbers allowed!");
         return false;
      }
