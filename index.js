@@ -5,7 +5,9 @@ let passlenreal = document.getElementById("passlen");
 
 function Nmbonly() {
          if (Number.isFinite(Number(passlenreal.value)) === false) {
-        alert("Please, enter only Numbers!");
+        //alert("Please, enter only Numbers!");
+        changespan ()
+        setTimeout (changespan2, 2000)
         return false;
      }        
      }
@@ -75,13 +77,30 @@ passgenBtn.addEventListener("click", function() {
     } 
 });
 
+function passcopie1() {
+    document.querySelector("#input-el1").value = realpass[0]
+}
+
+function passcopie2() {
+    document.querySelector("#input-el2").value = realpass[1]
+}
+
+function passcopie3() {
+    document.querySelector("#input-el3").value = realpass[2]
+}
+
+function passcopie4() {
+    document.querySelector("#input-el4").value = realpass[3]
+}
+
 let checkiftherespass = ['', '', '', ''];
 
 document.getElementById("input-el1").onclick = function() {
     if (JSON.stringify(realpass) !== JSON.stringify(checkiftherespass) && realpass.length === checkiftherespass.length) { 
     this.select();
     document.execCommand('copy');
-    alert(`The chosen password ${window.getSelection().toString()} is copied`);
+    document.querySelector("#input-el1").value = "Copied"
+    setTimeout(passcopie1, 1500)
     } else return false
   };
 
@@ -89,7 +108,8 @@ document.getElementById("input-el1").onclick = function() {
     if (JSON.stringify(realpass) !== JSON.stringify(checkiftherespass) && realpass.length === checkiftherespass.length) { 
     this.select();
     document.execCommand('copy');
-    alert(`The chosen password ${window.getSelection().toString()} is copied`);
+    document.querySelector("#input-el2").value = "Copied"
+    setTimeout(passcopie2, 1500)
     } else return false
   };
 
@@ -97,14 +117,30 @@ document.getElementById("input-el1").onclick = function() {
     if (JSON.stringify(realpass) !== JSON.stringify(checkiftherespass) && realpass.length === checkiftherespass.length) { 
     this.select();
     document.execCommand('copy');
-    alert(`The chosen password ${window.getSelection().toString()} is copied`);
+    document.querySelector("#input-el3").value = "Copied"
+    setTimeout(passcopie3, 1500)
     } else return false
   };
+
 
   document.getElementById("input-el4").onclick = function() {
     if (JSON.stringify(realpass) !== JSON.stringify(checkiftherespass) && realpass.length === checkiftherespass.length) { 
     this.select();
     document.execCommand('copy');
-    alert(`The chosen password ${window.getSelection().toString()} is copied`);
+    document.querySelector("#input-el4").value = "Copied"
+    setTimeout(passcopie4, 1500)
+    // alert(`The chosen password ${window.getSelection().toString()} is copied`);
     } else return false
   };
+
+
+
+    function changespan () {
+        let modal1 = document.querySelector('.modal')
+        modal1.style.display = 'block';
+    }
+
+    function changespan2 () {
+        let modal1 = document.querySelector('.modal')
+        modal1.style.display = 'none';
+    }
