@@ -19,7 +19,7 @@
                  <button class="gigatest" id="passgen" readonly><img src="flash-outline.svg" />Generate passwords</button>
             </div>
             <div class="top-inp">
-                    <input type="text" id="passlen" pattern="\d+" onkeypress="return Nmbonly(event)"  maxlength="2">
+                    <input type="text" id="passlen" pattern="\d+" onkeypress="return Nmbonly()"  maxlength="2">
                     <p class="passlenp">* put password lenght</p>
                 </div>
             <hr>
@@ -39,6 +39,11 @@
             </div>
         </div>
 	<script src="index.js"></script>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <p id="displaypass">Use numbers only for the password lenght</p>
+        </div>
     </div>
 	</body>
 </html>
