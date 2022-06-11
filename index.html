@@ -12,21 +12,22 @@
 		<div class="toppart">
             <button class="night-day-mode" id="dnnbtn" style="background-image: url('moon.png');"></button>
             <p class="genclass">Generate a</p>
-            <p class="randomp">a random password</p>
+            <p class="randomp">a random passwords</p>
             <p class="never">Never use an insecure password agan.</p>
             <div class="top-btn">
-                 <button class="gigatest" id="passgen" readonly><img src="flash-outline.svg" id="ligh12"/>Generate passwords</button>
-                  <p class="languageP">Chose a password language</p>
+                <button class="gigatest" id="mousemovepass" readonly>Mouse passwords generator</button>
+                <p class="languageP">Chose a character language</p>
                  <button class="gigatest2" id="language1" readonly></button>
                  <button class="gigatest2" id="language2" readonly></button>
                  <button class="gigatest2" id="language3" readonly></button>
                  <button class="gigatest2" id="language4" readonly></button>
                  <button class="gigatest2" id="language5" readonly></button>
                  <button class="gigatest2" id="language6" readonly></button>
+                 <button class="gigatest" id="passgen" readonly>Generate passwords</button>
             </div>
             <div class="top-inp">
+                <p class="passlenp">* put password lenght</p>
                     <input type="text" id="passlen" pattern="\d+" onkeypress="return Nmbonly()"  maxlength="2">
-                    <p class="passlenp">* put password lenght</p>
                 </div>
             <hr>
         </div>
@@ -49,6 +50,11 @@
     <div id="myModal" class="modal">
         <div class="modal-content" style="background-image: url('dark.jpg');">
           <p id="displaypass">Use numbers only for the password lenght</p>
+        </div>
+    </div>
+    <div id="myModal12" class="modal12">
+        <div class="modal-content12" style="background-image: url('dark.jpg');">
+          <p id="movemouseP">MOVE YOUR MOUSE HERE</p>
         </div>
     </div>
 	</body>
