@@ -20,7 +20,7 @@ let checkiftherespass = ['', '', '', ''];
 let realpass = [];
 let yourcharset = [];
 let passlenreal = document.getElementById("passlen");
-
+let numericGen = ["0123456789"];
 // language  --- part
 
 
@@ -169,11 +169,19 @@ function Nmbonly() {
      }        
      }
 
+function Nmbonly1() {
+        if (Number.isFinite(Number(passlenreal.value)) === false) {
+       alert("Please, enter only Numbers!");
+      // changespan ()
+      // setTimeout (changespan2, 2000)
+      // return false;
+    }        
+    }
 
 function password_generator( len ) {
     let inptL = JSON.stringify(inputlanguage);
     let length = (len)?(len):(yourcharset);
-    let numeric = '0123456789';
+    let numeric = JSON.stringify(numericGen);
     let punctuation = '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
     let password = "";
     let character = "";
@@ -300,3 +308,64 @@ document.getElementById("input-el1").onclick = function() {
   };
 
 
+//// -------- TESTING STUFF --------
+
+// Btnmouse open - close
+const mousemoveDIV = document.getElementById("mousemovepass")
+
+function openmouseDiv () {
+    let modal12 = document.querySelector('.modal12')
+    modal12.style.display = 'block';
+}
+
+function hidemouseDIV () {
+    let modal12 = document.querySelector('.modal12')
+    modal12.style.display = 'none';
+    Removetrackmousemovement ();
+    JSON.stringify(Xtrack);
+    JSON.stringify(Ytrack);
+    numericGen.push(Xtrack, Ytrack);
+    JSON.stringify(numericGen);
+    putoutpass();
+    resetMousepass ();
+}
+
+mousemoveDIV.addEventListener("click", function () {
+   if ( Number.isFinite(Number(passlenreal.value)) === false) {
+    console.log("HELP")
+    return false;
+   } else realpass.splice(0, realpass.length);
+        openmouseDiv ();
+        Addtrackmousemovement ();
+        setTimeout( hidemouseDIV, 5000);
+
+}
+)
+/// tracking x and y when mouse is moved 
+
+
+
+ let Xtrack = [];
+ let Ytrack = [];
+
+
+let callingtolog = (event) => {
+    Xtrack.push(event.clientX)
+    Ytrack.push(event.clientY)
+   }
+
+
+function Addtrackmousemovement () {
+    document.addEventListener("mousemove", callingtolog)
+}
+
+function Removetrackmousemovement () {
+    document.removeEventListener("mousemove", callingtolog)
+
+}
+
+function resetMousepass () {
+            Xtrack = [];
+            Ytrack = []; 
+            numericGen = ["0123456789"];
+}
