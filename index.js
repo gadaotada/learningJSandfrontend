@@ -20,7 +20,7 @@ let checkiftherespass = ['', '', '', ''];
 let realpass = [];
 let yourcharset = [];
 let passlenreal = document.getElementById("passlen");
-let numericGen = ["0123456789"];
+let numericGen = [];
 // language  --- part
 
 
@@ -55,6 +55,7 @@ passgenBtn.addEventListener("click", function() {
         Nmbonly();
     }  else {
         realpass.splice(0, realpass.length);
+        numericGen = ["1234567890"]
         putoutpass ();
         Nmbonly();
     } 
@@ -316,6 +317,7 @@ const mousemoveDIV = document.getElementById("mousemovepass")
 function openmouseDiv () {
     let modal12 = document.querySelector('.modal12')
     modal12.style.display = 'block';
+    numericGen = [];
 }
 
 function hidemouseDIV () {
@@ -367,5 +369,5 @@ function Removetrackmousemovement () {
 function resetMousepass () {
             Xtrack = [];
             Ytrack = []; 
-            numericGen = ["0123456789"];
+            numericGen = [];
 }
