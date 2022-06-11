@@ -4,19 +4,25 @@
 <title>Password Generator</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="index.css">
-<style>
-</style>
-<body>
+<body style="background-image: url('dark.jpg');">
     <div class="headd">
         Password Generator
     </div>
 	<div class="wrapper">
 		<div class="toppart">
+            <button class="night-day-mode" id="dnnbtn" style="background-image: url('moon.png');"></button>
             <p class="genclass">Generate a</p>
             <p class="randomp">a random password</p>
             <p class="never">Never use an insecure password agan.</p>
             <div class="top-btn">
-                 <button class="gigatest" id="passgen" readonly><img src="flash-outline.svg" />Generate passwords</button>
+                 <button class="gigatest" id="passgen" readonly><img src="flash-outline.svg" id="ligh12"/>Generate passwords</button>
+                  <p class="languageP">Chose a password language</p>
+                 <button class="gigatest2" id="language1" readonly></button>
+                 <button class="gigatest2" id="language2" readonly></button>
+                 <button class="gigatest2" id="language3" readonly></button>
+                 <button class="gigatest2" id="language4" readonly></button>
+                 <button class="gigatest2" id="language5" readonly></button>
+                 <button class="gigatest2" id="language6" readonly></button>
             </div>
             <div class="top-inp">
                     <input type="text" id="passlen" pattern="\d+" onkeypress="return Nmbonly()"  maxlength="2">
@@ -41,7 +47,7 @@
 	<script src="index.js"></script>
     </div>
     <div id="myModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="background-image: url('dark.jpg');">
           <p id="displaypass">Use numbers only for the password lenght</p>
         </div>
     </div>
