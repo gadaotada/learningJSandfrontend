@@ -26,7 +26,7 @@ body {
     text-align: center;
     font-weight: bold;
     margin-bottom: 1%;
-    margin-top: 10%;
+    margin-top: 1%;
     color:rgb(174, 174, 175);
     -webkit-text-stroke: 2px rgb(7, 7, 7);
 }
@@ -62,7 +62,7 @@ body {
     font-weight: lighter;
     color: rgb(90, 86, 86);
     padding-top: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     margin: 0px;
 }
 
@@ -126,8 +126,9 @@ td, #input-el1, #input-el3{
     text-align: center;
     color: white;
     width: 60px;
-    margin-top: 8px;
     margin-left: 30px;
+    margin-top: 00px;
+    padding-bottom: 0px;
 }
 
 .top-btn {
@@ -145,19 +146,10 @@ td, #input-el1, #input-el3{
 }
 
 
-#ligh12 {
-    width: 12%;
-    margin-left: 0px;
-    padding-left: 0px;
-    float:left;
-    padding-top: 0px;
-}
-
-
 .gigatest, .gigatest1 {
     display: block;
     width: 200px;
-    font-size: 16px;
+    font-size: 12pt;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
@@ -171,7 +163,7 @@ td, #input-el1, #input-el3{
     transition: all .4s ease-in-out;
     padding-top: 10px;
     padding-bottom: 10px;
-    height: 38px;
+
 }
 
 .gigatest:hover, .gigatest1:hover {
@@ -196,10 +188,9 @@ td, #input-el1, #input-el3{
 .passlenp {
     font-size: 10pt;
     width: 220px;
-    margin-top: 6px;
+    margin-top: 100%;
     font-style: italic;
     margin-left: 0px;
-    float: left;
 }
 
 
@@ -236,7 +227,7 @@ td, #input-el1, #input-el3{
  .languageP {
     font-size: 14pt;
     width: 400px;
-    padding-top: 20px;
+    padding-top: 0px;
     margin-bottom: 0px;
  }
 
@@ -248,11 +239,12 @@ td, #input-el1, #input-el3{
 
 .gigatest2 {
     border-color: green;
-    background-image: url("fr.png");
     background-size: 100%;
     background-repeat: no-repeat;
     height: 26px;
     width: 26px;
+    margin-bottom: 20px;
+    margin-right: 5px;
 }
 
 #language1 {
@@ -295,4 +287,44 @@ td, #input-el1, #input-el3{
     background-size: 100%;
 }
 
+
+/* TESTING STUFF */
+
+.modal12 {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.6);
+  }
+  
+  .modal-content12 {
+    background-color: aqua;
+    margin: 18% auto;
+    padding: 20px;
+    border: 5px solid rgb(179, 2, 2);
+    border-radius: 4px;
+    width: 50%;
+    height: 50%;
+    color:rgb(253, 255, 253);
+    font-size: 18pt;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+/* #mousemovepass {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+} */
 
