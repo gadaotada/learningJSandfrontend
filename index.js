@@ -1,7 +1,164 @@
-let passgenBtn = document.getElementById("passgen");
+// button -- part
+const imgdnn = document.getElementsByClassName("night-day-mode")
+const dayandnightBtn = document.getElementById("dnnbtn");
+const passgenBtn = document.getElementById("passgen");
+const bckgrimgb = document.getElementsByTagName("body")
+const bckgrimgm = document.getElementsByClassName("modal-content")
+const allgreenbtn = document.getElementsByClassName("gigatest2")
+let img123 = 'url("moon.png")'
+let img234 = 'url("sun.png")'
+
+const language1Btn = document.getElementById("language1");
+const language2Btn = document.getElementById("language2");
+const language3Btn = document.getElementById("language3");
+const language4Btn = document.getElementById("language4");
+const language5Btn = document.getElementById("language5");
+const language6Btn = document.getElementById("language6");
+
+// pass -- part
+let checkiftherespass = ['', '', '', ''];
 let realpass = [];
 let yourcharset = [];
 let passlenreal = document.getElementById("passlen");
+
+// language  --- part
+
+
+let inputlanguage = [`abcdefghijklmnopqrstuvwxyz`];
+let language1 = `abcdefghijklmnopqrstuvwxyz`;
+let language2 = `абвгдежзийклмнопрстуфхцчшщъыьэюя`;
+let language3 = `abcdefghijklmnopqrstuvwxyzçéâêîôûàèìòùëïü`;
+let language4 = `abcdefghijklmnopqrstuvwxyzäöüß`;
+let language5 = `abcdefghijklmnopqrstuvwxyzæøå`;
+let language6 = `abcçdefgğhıijklmnoöprsştuüvyz`;
+
+
+// buttons -- logic
+
+dayandnightBtn.addEventListener("click", function() {
+    if ( imgdnn[0].style.backgroundImage === img123) {
+        imgdnn[0].style.backgroundImage = "url('sun.png')";
+        bckgrimgb[0].style.backgroundImage = "url('bckimg.png')";
+        bckgrimgm[0].style.backgroundImage = "url('bckimg.png')"
+    }  else if( imgdnn[0].style.backgroundImage === img234) {
+        imgdnn[0].style.backgroundImage = "url('moon.png')";
+        bckgrimgb[0].style.backgroundImage = "url('dark.jpg')";
+        bckgrimgm[0].style.backgroundImage = "url('dark.jpg')"
+    }
+      })
+
+
+
+passgenBtn.addEventListener("click", function() {
+    if (realpass.length === 0 && yourcharset.length === 0) {
+        putoutpass ();
+        Nmbonly();
+    }  else {
+        realpass.splice(0, realpass.length);
+        putoutpass ();
+        Nmbonly();
+    } 
+});
+
+
+language1Btn.addEventListener("click", function() { 
+    enablelanguage1 ()
+    stylebuttons ()
+    document.getElementById("language1").style.borderColor = "red"
+    document.getElementById("language1").style.width = "30px"
+    document.getElementById("language1").style.height = "30px"
+    }
+)
+
+language2Btn.addEventListener("click", function() {
+    enablelanguage2 ()
+    stylebuttons ()
+    document.getElementById("language2").style.borderColor = "red"
+    document.getElementById("language2").style.width = "30px"
+    document.getElementById("language2").style.height = "30px"
+}
+)
+
+language3Btn.addEventListener("click", function() {
+    enablelanguage3 ()
+    stylebuttons ()
+    document.getElementById("language3").style.borderColor = "red"
+    document.getElementById("language3").style.width = "30px"
+    document.getElementById("language3").style.height = "30px"
+}
+)
+
+language4Btn.addEventListener("click", function() {
+    enablelanguage4 ()
+    stylebuttons ()
+    document.getElementById("language4").style.borderColor = "red"
+    document.getElementById("language4").style.width = "30px"
+    document.getElementById("language4").style.height = "30px"
+}
+)
+
+language5Btn.addEventListener("click", function() {
+    enablelanguage5 ()
+    stylebuttons ()
+    document.getElementById("language5").style.borderColor = "red"
+    document.getElementById("language5").style.width = "30px"
+    document.getElementById("language5").style.height = "30px"
+}
+)
+
+language6Btn.addEventListener("click", function() {
+    enablelanguage6 ()
+    stylebuttons ()
+    document.getElementById("language6").style.borderColor = "red"
+    document.getElementById("language6").style.width = "30px"
+    document.getElementById("language6").style.height = "30px"
+}
+)
+
+
+// function -- part
+
+function enablelanguage1() {
+    if ( inputlanguage.length > 0) {
+        inputlanguage.pop()
+        inputlanguage.push(language1)
+    } 
+}
+
+function enablelanguage2() {
+    if ( inputlanguage.length > 0) {
+        inputlanguage.pop()
+        inputlanguage.push(language2)
+    }
+}
+
+function enablelanguage3() {
+    if ( inputlanguage.length > 0) {
+        inputlanguage.pop()
+        inputlanguage.push(language3)
+    }
+}
+
+function enablelanguage4() {
+    if ( inputlanguage.length > 0) {
+        inputlanguage.pop()
+        inputlanguage.push(language4)
+    }
+}
+
+function enablelanguage5() {
+    if ( inputlanguage.length > 0) {
+        inputlanguage.pop()
+        inputlanguage.push(language5)
+    }
+}
+
+function enablelanguage6() {
+    if ( inputlanguage.length > 0) {
+        inputlanguage.pop()
+        inputlanguage.push(language6)
+    }
+}
 
 function Nmbonly() {
          if (Number.isFinite(Number(passlenreal.value)) === false) {
@@ -12,31 +169,19 @@ function Nmbonly() {
      }        
      }
 
-addEventListener("change", function () {
-     if (yourcharset.length === 0) {
-        yourcharset.push(passlenreal.value);
-    }
-    else if (yourcharset.length > 0) {
-        yourcharset.splice(0, yourcharset.length)
-        yourcharset.push(passlenreal.value)
-    }   
-    else if (passlenreal.value > 0) {
-        passlenreal.splice(0, passlenreal.value);
-    }
-});
 
 function password_generator( len ) {
+    let inptL = JSON.stringify(inputlanguage);
     let length = (len)?(len):(yourcharset);
-    let string = "abcdefghijklmnopqrstuvwxyz";
     let numeric = '0123456789';
     let punctuation = '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
     let password = "";
     let character = "";
     while( password.length<length ) {
-        entity1 = Math.ceil(string.length * Math.random()*Math.random());
+        entity1 = Math.ceil(inptL.length * Math.random()*Math.random());
         entity2 = Math.ceil(numeric.length * Math.random()*Math.random());
         entity3 = Math.ceil(punctuation.length * Math.random()*Math.random());
-        hold = string.charAt( entity1 );
+        hold = inptL.charAt( entity1 );
         hold = (password.length%2==0)?(hold.toUpperCase()):(hold);
         character += hold;
         character += numeric.charAt( entity2 );
@@ -66,16 +211,6 @@ function putoutpass() {
     document.getElementById("input-el4").value = realpass[3];
 };
 
-passgenBtn.addEventListener("click", function() {
-    if (realpass.length === 0 && yourcharset.length === 0) {
-        putoutpass ();
-        Nmbonly();
-    }  else {
-        realpass.splice(0, realpass.length);
-        putoutpass ();
-        Nmbonly();
-    } 
-});
 
 function passcopie1() {
     document.querySelector("#input-el1").value = realpass[0]
@@ -93,7 +228,38 @@ function passcopie4() {
     document.querySelector("#input-el4").value = realpass[3]
 }
 
-let checkiftherespass = ['', '', '', ''];
+function stylebuttons () {
+    for (let i= 0; i < allgreenbtn.length; i++)  {
+    allgreenbtn[i].style.borderColor = "green";
+    allgreenbtn[i].style.width = "26px";
+    allgreenbtn[i].style.height = "26px";
+    }
+}
+
+function changespan () {
+    let modal1 = document.querySelector('.modal')
+    modal1.style.display = 'block';
+}
+
+function changespan2 () {
+    let modal1 = document.querySelector('.modal')
+    modal1.style.display = 'none';
+}
+
+// Events - part
+
+addEventListener("change", function () {
+    if (yourcharset.length === 0) {
+       yourcharset.push(passlenreal.value);
+   }
+   else if (yourcharset.length > 0) {
+       yourcharset.splice(0, yourcharset.length)
+       yourcharset.push(passlenreal.value)
+   }   
+   else if (passlenreal.value > 0) {
+       passlenreal.splice(0, passlenreal.value);
+   }
+});
 
 document.getElementById("input-el1").onclick = function() {
     if (JSON.stringify(realpass) !== JSON.stringify(checkiftherespass) && realpass.length === checkiftherespass.length) { 
@@ -134,13 +300,3 @@ document.getElementById("input-el1").onclick = function() {
   };
 
 
-
-    function changespan () {
-        let modal1 = document.querySelector('.modal')
-        modal1.style.display = 'block';
-    }
-
-    function changespan2 () {
-        let modal1 = document.querySelector('.modal')
-        modal1.style.display = 'none';
-    }
