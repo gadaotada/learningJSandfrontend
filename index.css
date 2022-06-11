@@ -7,7 +7,7 @@ body {
   @media (min-width: 481px) , (max-width: 1024px) and (min-width: 1025px)
   {
       body {
-          background-image: url("bckimg.png");
+         /* background-image: url("bckimg.png"); */
       }
       .headd {
         width: 100px;
@@ -27,7 +27,8 @@ body {
     font-weight: bold;
     margin-bottom: 1%;
     margin-top: 10%;
-    color: rgb(37, 37, 37)
+    color:rgb(174, 174, 175);
+    -webkit-text-stroke: 2px rgb(7, 7, 7);
 }
 
 .wrapper {
@@ -37,7 +38,7 @@ body {
     margin-right: auto;
     margin-top: 0px;
     border-radius: 10px;
-    border: 6px solid white;
+    border: 6px solid rgb(180, 178, 178);
     background-color: rgb(17, 17, 31);
   }
 
@@ -51,7 +52,7 @@ body {
 }
 
 .genclass{
-    padding-top: 100px;
+    padding-top: 50px;
     margin: 0px;
     padding-bottom: 0px;
 }
@@ -105,8 +106,7 @@ td, #input-el1, #input-el3{
     width: 180px;
 }
 
-
-input {
+ input {
     width: 132px;
     height: 30px;
     background-color: rgb(50, 50, 65);
@@ -132,7 +132,7 @@ input {
 
 .top-btn {
     display: inline-block;
-    width:120px;
+    width:240px;
     height: 50px;
 }
 
@@ -145,7 +145,7 @@ input {
 }
 
 
-img{
+#ligh12 {
     width: 12%;
     margin-left: 0px;
     padding-left: 0px;
@@ -154,7 +154,7 @@ img{
 }
 
 
-.gigatest {
+.gigatest, .gigatest1 {
     display: block;
     width: 200px;
     font-size: 16px;
@@ -174,7 +174,7 @@ img{
     height: 38px;
 }
 
-.gigatest:hover {
+.gigatest:hover, .gigatest1:hover {
     background-position: 100% 0;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -182,12 +182,12 @@ img{
     transition: all .4s ease-in-out;
 }
 
-.gigatest:focus {
+.gigatest:focus, .gigatest1:focus {
     outline: none;
 }
 
 
-.gigatest {
+.gigatest, .gigatest1 {
     background-image: linear-gradient(to right, rgb(86, 167, 86)0, #3cba92, #30dd8a, rgb(86, 167, 86));
     box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
 }
@@ -216,7 +216,7 @@ img{
     background-color: rgba(0,0,0,0.6);
   }
   
-.modal-content {
+  .modal-content {
     background-color: aqua;
     margin: 18% auto;
     padding: 20px;
@@ -231,4 +231,68 @@ img{
     -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
-  
+  /*  Languge side */
+
+ .languageP {
+    font-size: 14pt;
+    width: 400px;
+    padding-top: 20px;
+    margin-bottom: 0px;
+ }
+
+.gigatest1 {
+    width: 30px;
+    margin-left: 2px;
+    display: inline-block;
+}
+
+.gigatest2 {
+    border-color: green;
+    background-image: url("fr.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 26px;
+    width: 26px;
+}
+
+#language1 {
+    background-image: url("en.png");
+
+}
+
+#language2 {
+    background-image: url("bg.png");
+}
+
+#language3 {
+    background-image: url("fr.png");
+
+}
+
+#language4 {
+    background-image: url("de.png");
+ 
+}
+
+#language5 {
+    background-image: url("da.png");
+   
+}
+
+#language6 {
+    background-image: url("tr.png");
+ 
+}
+
+.night-day-mode {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-top: 20px;
+    border: 4px solid rgb(57, 111, 211);
+    border-radius: 22px;
+    background-size: 100%;
+}
+
+
