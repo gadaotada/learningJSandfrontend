@@ -328,12 +328,5 @@ td, #input-el1, #input-el3{
     margin-bottom: 0px;
 } */
 
-@media all and (min-width: 480px) {
-    #phoneContent {display:block;}
-    #mousemovepass {display:none;}
-}
-
-@media all and (max-width: 479px) {
-    #phoneContent {display:none;}
-    #mousemovepass {display:block;}
-}
+#mousemovepass {display:none;}
+#phoneContent {display:none;}
