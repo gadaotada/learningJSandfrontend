@@ -170,15 +170,6 @@ function Nmbonly() {
      }        
      }
 
-function Nmbonly1() {
-        if (Number.isFinite(Number(passlenreal.value)) === false) {
-       alert("Please, enter only Numbers!");
-      // changespan ()
-      // setTimeout (changespan2, 2000)
-      // return false;
-    }        
-    }
-
 function password_generator( len ) {
     let inptL = JSON.stringify(inputlanguage);
     let length = (len)?(len):(yourcharset);
@@ -336,8 +327,9 @@ function hidemouseDIV () {
 
 mousemoveDIVpc.addEventListener("click", function () {
    if ( Number.isFinite(Number(passlenreal.value)) === false) {
-    console.log("HELP")
-    return false;
+        changespan ();
+        setTimeout (changespan2, 2000);
+        return false;
    } else realpass.splice(0, realpass.length);
         openmouseDiv ();
         Addtrackmousemovement ();
@@ -390,8 +382,9 @@ function mobilePC () {
 
 mousemoveDIVmob.addEventListener("click", function () {
     if ( Number.isFinite(Number(passlenreal.value)) === false) {
-     console.log("HELP")
-     return false;
+        changespan ();
+        setTimeout (changespan2, 2000);
+        return false;
     } else realpass.splice(0, realpass.length);
          openmouseDiv ();
          AddtrackMobileMovement ();
@@ -400,13 +393,12 @@ mousemoveDIVmob.addEventListener("click", function () {
  })
 
 let gyroscope = new Gyroscope({frequency: 10});
-let Ztrack = []
-
+let Ztrack = [];
 
 let gyroscopetracking = e => {
-    Xtrack.push(gyroscope.x)
-    Ytrack.push(gyroscope.y)
-    Ztrack.push(gyroscope.z)
+    Xtrack.push(gyroscope.x);
+    Ytrack.push(gyroscope.y);
+    Ztrack.push(gyroscope.z);
 }
 
 function AddtrackMobileMovement () {
@@ -438,3 +430,4 @@ function hidemouseDIVmob () {
     putoutpass();
     resetMobpass ();
 } 
+
