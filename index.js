@@ -418,6 +418,13 @@ function RemovetrackMobileMovement () {
 
 }
 
+function resetMobpass () {
+            Xtrack = [];
+            Ytrack = [];
+            Ztrack = [];
+            numericGen = [];
+}
+
 function hidemouseDIVmob () {
     let modal12 = document.querySelector('.modal12')
     modal12.style.display = 'none';
@@ -428,7 +435,5 @@ function hidemouseDIVmob () {
     numericGen.push(Xtrack, Ytrack, Ztrack);
     JSON.stringify(numericGen);
     putoutpass();
-    resetMousepass ();
+    resetMobpass ();
 } 
-
-
