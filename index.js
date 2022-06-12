@@ -312,7 +312,8 @@ document.getElementById("input-el1").onclick = function() {
 //// -------- TESTING STUFF --------
 
 // Btnmouse open - close
-const mousemoveDIV = document.getElementById("mousemovepass")
+const mousemoveDIVpc = document.getElementById("mousemovepass")
+const mousemoveDIVmob = document.getElementById("phoneContent")
 
 function openmouseDiv () {
     let modal12 = document.querySelector('.modal12')
@@ -332,7 +333,7 @@ function hidemouseDIV () {
     resetMousepass ();
 }
 
-mousemoveDIV.addEventListener("click", function () {
+mousemoveDIVpc.addEventListener("click", function () {
    if ( Number.isFinite(Number(passlenreal.value)) === false) {
     console.log("HELP")
     return false;
@@ -341,8 +342,19 @@ mousemoveDIV.addEventListener("click", function () {
         Addtrackmousemovement ();
         setTimeout( hidemouseDIV, 5000);
 
-}
-)
+})
+
+mousemoveDIVmob.addEventListener("click", function () {
+    if ( Number.isFinite(Number(passlenreal.value)) === false) {
+     console.log("HELP")
+     return false;
+    } else realpass.splice(0, realpass.length);
+         openmouseDiv ();
+         Addtrackmousemovement ();
+         setTimeout( hidemouseDIV, 5000);
+ 
+ })
+
 /// tracking x and y when mouse is moved 
 
 
