@@ -410,12 +410,11 @@ let gyroscopetracking = e => {
 }
 
 function AddtrackMobileMovement () {
-    document.addEventListener("reading", gyroscopetracking)
+    gyroscope.addEventListener("reading", gyroscopetracking)
 }
 
 function RemovetrackMobileMovement () {
-    document.removeEventListener("reading", gyroscopetracking)
-
+    gyroscope.removeEventListener("reading", gyroscopetracking)
 }
 
 function resetMobpass () {
