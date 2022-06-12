@@ -402,7 +402,7 @@ mousemoveDIVmob.addEventListener("click", function () {
 let gyroscope = new Gyroscope({frequency: 10});
 let Ztrack = []
 
-gyroscope.addEventListener('reading')
+
 let gyroscopetracking = e => {
     Xtrack.push(gyroscope.x)
     Ytrack.push(gyroscope.y)
