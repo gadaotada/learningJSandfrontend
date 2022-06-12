@@ -388,10 +388,24 @@ function mobilePC () {
 
 /// Gyro sensore logic 
 
+
+/// Gyro sensore logic 
+
+mousemoveDIVmob.addEventListener("click", function () {
+    if ( Number.isFinite(Number(passlenreal.value)) === false) {
+     console.log("HELP")
+     return false;
+    } else realpass.splice(0, realpass.length);
+         openmouseDiv ();
+         AddtrackMobileMovement ();
+         setTimeout( hidemouseDIVmob, 5000);
+ 
+ })
+
 let gyroscope = new gyroscope({frequency: 10});
 let Ztrack = []
 
-// gyroscope.addEventListener('reading')
+gyroscope.addEventListener('reading')
 let gyroscopetracking = e => {
     Xtrack.push(gyroscope.x)
     Ytrack.push(gyroscope.y)
@@ -418,15 +432,6 @@ function hidemouseDIVmob () {
     JSON.stringify(numericGen);
     putoutpass();
     resetMousepass ();
-}
+} 
 
-mousemoveDIVmob.addEventListener("click", function () {
-    if ( Number.isFinite(Number(passlenreal.value)) === false) {
-     console.log("HELP")
-     return false;
-    } else realpass.splice(0, realpass.length);
-         openmouseDiv ();
-         AddtrackMobileMovement ();
-         setTimeout( hidemouseDIVmob, 5000);
- 
- })
+
