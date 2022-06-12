@@ -314,6 +314,7 @@ document.getElementById("input-el1").onclick = function() {
 // Btnmouse open - close
 const mousemoveDIVpc = document.getElementById("mousemovepass")
 const mousemoveDIVmob = document.getElementById("phoneContent")
+const phoneorpcTXT = document.getElementById("movemouseP")
 
 function openmouseDiv () {
     let modal12 = document.querySelector('.modal12')
@@ -344,20 +345,8 @@ mousemoveDIVpc.addEventListener("click", function () {
 
 })
 
-mousemoveDIVmob.addEventListener("click", function () {
-    if ( Number.isFinite(Number(passlenreal.value)) === false) {
-     console.log("HELP")
-     return false;
-    } else realpass.splice(0, realpass.length);
-         openmouseDiv ();
-         Addtrackmousemovement ();
-         setTimeout( hidemouseDIV, 5000);
- 
- })
 
 /// tracking x and y when mouse is moved 
-
-
 
  let Xtrack = [];
  let Ytrack = [];
@@ -386,11 +375,58 @@ function resetMousepass () {
 
 function mobilePC () {
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-        mousemoveDIVmob.style.display = "block"
-        mousemoveDIVpc.style.display = "none"
+        mousemoveDIVmob.style.display = "block";
+        mousemoveDIVpc.style.display = "none";
+        movemouseP.innerText = "Flip your phone around";
         return true;
       } else {
-        mousemoveDIVpc.style.display = "block"
-        mousemoveDIVmob.style.display = "none"
-        return false; }
+        mousemoveDIVpc.style.display = "block";
+        mousemoveDIVmob.style.display = "none";
+        movemouseP.innerText = "Move your mouse around";
+        }
+    }
+
+/// Gyro sensore logic 
+
+let gyroscope = new gyroscope({frequency: 10});
+let Ztrack = []
+
+// gyroscope.addEventListener('reading')
+let gyroscopetracking = e => {
+    Xtrack.push(gyroscope.x)
+    Ytrack.push(gyroscope.y)
+    Ztrack.push(gyroscope.z)
 }
+
+function AddtrackMobileMovement () {
+    document.addEventListener("reading", gyroscopetracking)
+}
+
+function RemovetrackMobileMovement () {
+    document.removeEventListener("reading", gyroscopetracking)
+
+}
+
+function hidemouseDIVmob () {
+    let modal12 = document.querySelector('.modal12')
+    modal12.style.display = 'none';
+    RemovetrackMobileMovement ();
+    JSON.stringify(Xtrack);
+    JSON.stringify(Ytrack);
+    JSON.stringify(Ztrack);
+    numericGen.push(Xtrack, Ytrack, Ztrack);
+    JSON.stringify(numericGen);
+    putoutpass();
+    resetMousepass ();
+}
+
+mousemoveDIVmob.addEventListener("click", function () {
+    if ( Number.isFinite(Number(passlenreal.value)) === false) {
+     console.log("HELP")
+     return false;
+    } else realpass.splice(0, realpass.length);
+         openmouseDiv ();
+         AddtrackMobileMovement ();
+         setTimeout( hidemouseDIVmob, 5000);
+ 
+ })
