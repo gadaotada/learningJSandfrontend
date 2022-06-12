@@ -388,9 +388,6 @@ function mobilePC () {
 
 /// Gyro sensore logic 
 
-
-/// Gyro sensore logic 
-
 mousemoveDIVmob.addEventListener("click", function () {
     if ( Number.isFinite(Number(passlenreal.value)) === false) {
      console.log("HELP")
@@ -402,7 +399,7 @@ mousemoveDIVmob.addEventListener("click", function () {
  
  })
 
-let gyroscope = new gyroscope({frequency: 10});
+let gyroscope = new Gyroscope({frequency: 10});
 let Ztrack = []
 
 gyroscope.addEventListener('reading')
