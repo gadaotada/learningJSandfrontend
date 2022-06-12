@@ -383,3 +383,14 @@ function resetMousepass () {
             Ytrack = []; 
             numericGen = [];
 }
+
+function mobilePC () {
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        mousemoveDIVmob.style.display = "block"
+        mousemoveDIVpc.style.display = "none"
+        return true;
+      } else {
+        mousemoveDIVpc.style.display = "block"
+        mousemoveDIVmob.style.display = "none"
+        return false; }
+}
